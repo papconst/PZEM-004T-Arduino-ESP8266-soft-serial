@@ -1,5 +1,17 @@
 # pzem-004t-soft-serial
-Lib to connect PZEM-004T to Arduino/ESP8266 controller through SoftwareSerial
+Library to connect PZEM-004T to Arduino/ESP8266 controller through SoftwareSerial
+
+Many thanks to https://github.com/olehs/PZEM004T
+
+Tested with:
+Arduino Nano, Pro mini (pins 10,11);
+ESP-01 (0,2);
+ESP-12F (4,5 and 12,13);
+
+!NOTE!
+There is no way to reset saved energy value by software. You can reset it manually by pressing button, but SerialPort should NOT be used at that moment.
+
+Detailed datasheet could be found here https://forum.arduino.cc/index.php?action=dlattach;topic=480767.0;attach=220845
 
 Serial communication
 This module is equipped with TTL serial data communication interface, you can read and set the relevant parameters via the serial port; but if you want to communicate with a device which has USB or RS232 (such as computer), you need to be equipped with different TTL pin board (USB communication needs to be equipped with TTL to USB pin board; RS232 communication needs to be equipped with TTL to RS232 pin 
@@ -57,13 +69,10 @@ Note: Reply energy data is D1D2D3 = 01 86 9F, converts 01 86 9F to decimal is 99
 Precautions 
 1. This module is suitable for indoor, please do not use outdoor. 
 2. Applied load should not exceed the rated power. 
-3. Wiring order can’t be wrong. 
+3. Wiring order can't be wrong. 
 
 Specification parameters 
 1. Working voltage: 80 ~ 260VAC   
 2. Test voltage: 80 ~ 260VAC 
 3. Rated power: 100A/22000W 
 4. Operating frequency: 45-65Hz 
-
-!NOTE!
-There is no way to reset saved energy value by software. You can reset it manually by pressing button, but SerialPort should NOT be used at that moment.
