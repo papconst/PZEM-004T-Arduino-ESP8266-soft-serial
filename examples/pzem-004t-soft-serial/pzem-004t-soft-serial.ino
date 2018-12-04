@@ -1,8 +1,3 @@
-/*
- * NOTE!
- * There is no way to reset energy by software.
- * You can reset it manually by pressing button, but SerialPort should NOT be used at that moment.
- */
 #include "pzem-004t.h"
 
 PZEM_004T pzem(10,11);// Arduino: 10,11
