@@ -7,7 +7,7 @@
 
 PZEM_004T pzem(10,11);// Arduino: 10,11
 	              // ESP-01: 0,2
-                      // ESP-12F: 0-5 of 12-15
+                      // ESP-12F: 0-5 or 12-15
 void setup() 
 {
   Serial.begin(9600);
