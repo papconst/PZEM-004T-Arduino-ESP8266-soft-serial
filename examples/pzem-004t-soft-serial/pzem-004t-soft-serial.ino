@@ -8,14 +8,15 @@ void setup()
   Serial.begin(9600);
   Serial.print("Waiting on PZEM");
   while(!pzem.setAddress(192,168,1,1))Serial.print(".");
+  Serial.println("OK");
 }
 
 void loop()
 {
   Serial.println();
   
-  float V = pzem.getVoltage();
-  if (V >= 0) Serial.println("V = " + (String)V + " Volts");
+  float U = pzem.getVoltage();
+  if (U >= 0) Serial.println("U = " + (String)U + " Volts");
 
   float I = pzem.getCurrent();
   if (I >= 0) Serial.println("I = " + (String)I + " Amps");
