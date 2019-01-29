@@ -69,7 +69,7 @@ bool PZEM_004T::getData(uint8_t cmd, uint8_t arg, uint8_t *data)
     data[i++] = incomingByte;
   } 
   if(checkCrc(data)) return true;
-  else false;
+  else return false;
 }
 
 void PZEM_004T::sendCommand(const uint8_t com, const uint8_t arg)
