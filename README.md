@@ -6,10 +6,10 @@ Many thanks to https://github.com/olehs/PZEM004T
 Tested with:
 Arduino Nano, Pro mini (pins 10,11);
 ESP-01 (0,2);
-ESP-12F (4,5 and 12,13);
+ESP-12F (0-5 or 12-15);
 
 !NOTE!
-There is no way to reset saved energy value by software. You can reset it manually by pressing button, but SerialPort should NOT be used at that moment.
+There is no way to reset saved energy value by software. You can reset it manually by pressing buttonm hold for 5 seconds, release and press again. Serial Port should NOT be used at that moment.
 
 Detailed datasheet could be found here https://forum.arduino.cc/index.php?action=dlattach;topic=480767.0;attach=220845
 

@@ -81,7 +81,6 @@ void PZEM_004T::sendCommand(const uint8_t com, const uint8_t arg)
   command[5] = arg;
   command[6] = getCrc(command);
   swSer->write(command, sizeof(command));  
-  yield();
   delay(CMD_DELAY);
 }
 
