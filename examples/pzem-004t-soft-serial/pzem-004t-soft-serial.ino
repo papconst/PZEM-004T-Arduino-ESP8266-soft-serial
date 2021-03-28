@@ -5,9 +5,12 @@
  */
 #include "pzem-004t.h"
 
-PZEM_004T pzem(10,11);// Arduino: 10,11
-	              // ESP-01: 0,2
-                      // ESP-12F: 0-5 or 12-15
+PZEM_004T pzem(10,11);//   Attach new pzem to 10th and 11th pins of Arduino.
+/*
+* On ESP-01 you can use GPIOs 0 and 2;
+* On ESP-12F you may use GPIOs 0,1,2,3,4,5 and 12,13,14,15
+*/
+
 void setup() 
 {
   Serial.begin(9600);
